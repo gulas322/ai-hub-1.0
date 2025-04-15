@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: vw-ai
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        model: deepseek-r1:1.5b
+    openai:
+      base-url: https://api.deepseek.com
+      api-key: sk-626437123487249b3b23ebf72e6065968
+      chat:
+        options:
+          model: deepseek-chat
+#      embedding:
+#        base-url: https://dashscope.aliyuncs.com/compatible-mode
+#        api-key: sk-9562ac7b26a948dba72b24c6bb58b43c
+#        options:
+#          model: text-embedding-v3
+#          dimension: 1024
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://rm-j64epq4234322sd29io.mysql.rds.aliyuncs.com:3306/aihub?serverTimezone=Asia/Shanghai&useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&tinyInt1isBit=false&allowPublicKeyRetrieval=true&allowMultiQueries=true&useServerPrepStmts=false
+    username: root12343
+    password: Fe-h5R3ZRQkpS2v435
+
+
+logging:
+  level:
+#    开启日志记录为debug级别
+    org.springframework.ai: debug
+    com.vm.ai: debug
